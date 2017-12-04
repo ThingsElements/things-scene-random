@@ -18,14 +18,14 @@ const NATURE = {
   mutable: false,
   resizable: true,
   rotatable: true,
-  properties : [{
+  properties: [{
     type: 'select',
     label: 'format',
     name: 'format',
     property: {
-      options: formats.map(format => ({display: format, value: format}))
+      options: formats.map(format => ({ display: format, value: format }))
     }
-  },{
+  }, {
     type: 'number',
     label: 'count',
     name: 'count'
@@ -99,7 +99,7 @@ export default class Random extends DataSource(RectPath(Shape)) {
       count
     } = this.state
 
-    if(!Random.loaded || !format || !count)
+    if (!Random.loaded || !format || !count)
       return
 
     this.data = chance.n(chance[format], count)
@@ -113,10 +113,10 @@ export default class Random extends DataSource(RectPath(Shape)) {
   }
 
   _startRepeater() {
-    if(this.period) {
+    if (this.getState('period')) {
       this.repeatTimer = setInterval(function () {
         this.random();
-      }.bind(this), this.period);
+      }.bind(this), this.getState('period'));
     }
 
     this.random();
@@ -124,10 +124,10 @@ export default class Random extends DataSource(RectPath(Shape)) {
 
   _stopRepeater() {
     if (this.repeatTimer)
-      clearTimeout(this._repeatTimer)
+      clearTimeout(this.repeatTimer)
   }
 
-   _draw(context) {
+  _draw(context) {
     var {
       left,
       top,
