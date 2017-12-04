@@ -28,11 +28,13 @@ const NATURE = {
   }, {
     type: 'number',
     label: 'count',
-    name: 'count'
+    name: 'count',
+    placeholder: 1
   }, {
     type: 'number',
     label: 'period',
-    name: 'period'
+    name: 'period',
+    placeholder: 'milli-seconds'
   }]
 }
 
@@ -81,7 +83,7 @@ export default class Random extends DataSource(RectPath(Shape)) {
     this._initRandom()
   }
 
-  added() {
+  ready() {
     if (!this.app.isViewMode)
       return;
 
@@ -96,15 +98,13 @@ export default class Random extends DataSource(RectPath(Shape)) {
   random() {
     var {
       format,
-      count
+      count = 1
     } = this.state
 
     if (!Random.loaded || !format || !count)
       return
 
     this.data = chance.n(chance[format], count)
-
-    console.log('data', this.data)
   }
 
   _initRandom() {
