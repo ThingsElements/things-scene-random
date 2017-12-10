@@ -85,7 +85,21 @@ Copyright © HatioLab Inc. All rights reserved.
             height: 100,
             count: 10,
             period: 1000,
-            format: 'zip'
+            format: 'zip',
+            mappings: [{
+              target: '#zipcode',
+              property: 'value',
+              rule: 'value'
+            }]
+          }, {
+            type: 'text',
+            id: 'zipcode',
+            top: 100,
+            left: 200,
+            width: 400,
+            height: 100,
+            fontColor: 'black',
+            fontSize: 30
           }]
         }
       });
