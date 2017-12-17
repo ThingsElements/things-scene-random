@@ -1,8 +1,9 @@
 {
-  "name": "things-scene-random",
+  "name": "@things-elements/things-scene-random",
+  "flat": true,
   "version": "0.1.0",
   "description": "An random component for things-scene.",
-  "main": "index.js",
+  "main": "things-scene-random-min.js",
   "directories": {
     "test": "test"
   },
@@ -41,5 +42,7 @@
     "gulp": "^3.8.5",
     "gulp-header-license": "^1.0.9"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@hatiolab/things-scene": "^2.2.36"
+  }
 }
