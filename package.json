@@ -1,9 +1,9 @@
 {
-  "name": "@things-elements/things-scene-random",
-  "version": "0.1.3",
+  "name": "@things-scene/random",
+  "version": "0.2.0",
   "description": "An random component for things-scene.",
+  "things-scene": true,
   "main": "src/index.js",
-  "things-shell": true,
   "directories": {
     "test": "test"
   },
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/ThingsElements/things-scene-random#readme",
   "devDependencies": {
-    "@hatiolab/things-shell": "^0.2.25"
+    "@hatiolab/things-shell": "^0.3.0"
   },
   "dependencies": {
     "@hatiolab/things-scene": "^2.2.36"

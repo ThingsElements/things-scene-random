@@ -54,13 +54,15 @@ export default class Random extends DataSource(RectPath(Shape)) {
   }
 
   ready() {
-    ScriptLoader.load(['http://chancejs.com/chance.min.js'])
-    .then(() => {
-      if (!this.app.isViewMode)
-        return;
+    super.ready();
 
-      this._initRandom()
-    }, error)
+    ScriptLoader.load(['http://chancejs.com/chance.min.js'])
+      .then(() => {
+        if (!this.app.isViewMode)
+          return;
+
+        this._initRandom()
+      }, error)
   }
 
   dispose() {
@@ -98,6 +100,8 @@ export default class Random extends DataSource(RectPath(Shape)) {
   _stopRepeater() {
     if (this.repeatTimer)
       clearTimeout(this.repeatTimer)
+
+    delete this.repeatTimer;
   }
 
   _draw(context) {
