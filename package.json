@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "@hatiolab/things-scene": "*",
-    "@things-scene/form": "^0.2.13"
+    "@things-scene/form": "*"
   }
 }
