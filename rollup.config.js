@@ -21,7 +21,7 @@ export default [
     external,
     output: [
       {
-        file: pkg.main,
+        file: "dist/things-scene-random.js",
         name: "things-scene-random",
         format: "umd",
         globals: {
