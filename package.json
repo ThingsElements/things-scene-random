@@ -1,9 +1,9 @@
 {
   "name": "@things-scene/random",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "An random component for things-scene.",
   "things-scene": true,
-  "main": "dist/things-scene-random.js",
+  "main": "src/index.js",
   "module": "dist/things-scene-random.mjs",
   "jsnext:main": "dist/things-scene-random.mjs",
   "directories": {
