@@ -69,7 +69,7 @@ export default class Random extends DataSource(RectPath(Shape)) {
   ready() {
     super.ready();
 
-    ScriptLoader.load(["http://chancejs.com/chance.min.js"]).then(() => {
+    ScriptLoader.load(["https://chancejs.com/chance.min.js"]).then(() => {
       if (!this.app.isViewMode) return;
 
       this._initRandom();
