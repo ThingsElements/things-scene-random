@@ -1,5 +1,3 @@
-import locales from './locales'
-
 import icon from './assets/random.png';
 
 var templates = [{
@@ -22,6 +20,5 @@ var templates = [{
 }];
 
 export default {
-  templates,
-  locales
+  templates
 };
