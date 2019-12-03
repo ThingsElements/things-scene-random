@@ -10,5 +10,6 @@ licenses
 .vscode
 .travis
 .yo-rc.json
+yarn.lock
 npm-debug.log
 db.sqlite
